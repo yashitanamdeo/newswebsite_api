@@ -23,6 +23,7 @@ import {
   SocialAuthServiceConfig,
   SocialLoginModule,
 } from 'angularx-social-login';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import {
     HealthnewsComponent,
     SciencenewsComponent,
     SportsnewsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,9 @@ import {
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('google-client-id'),
+            provider: new GoogleLoginProvider(
+              '774241408642-8tc4pbb7clg6ecb7kj5qkupi02ss2j6e.apps.googleusercontent.com'
+            ),
           },
         ],
       } as SocialAuthServiceConfig,
